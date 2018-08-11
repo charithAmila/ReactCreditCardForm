@@ -5,7 +5,7 @@ This is a sample project developed with ReactJs and Redux
 
 2. cd <PROJECT FOLDER>
 
-3. If use npm, npm install yarn yarn install
+3. If use npm, ```javascript npm install ``` yarn yarn install
 
 4. npm start , yarn start
 
