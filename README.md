@@ -1,6 +1,8 @@
 ## Sample credit card form using React
 This is a sample project developed with React and Redux
 ## Installation
+Sounds good and you just want to see how it works? Here is a quick start guide:
+
 1. Clone the project 
 
 2. ``` cd <PROJECT FOLDER> ```
