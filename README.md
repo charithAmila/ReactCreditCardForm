@@ -1,5 +1,5 @@
-## Sample credti card form using ReactJs
-This is a sample project developed with ReactJs and Redux
+## Sample credit card form using React
+This is a sample project developed with React and Redux
 ## Installation
 1. Clone the project 
 
