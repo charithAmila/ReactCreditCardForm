@@ -20,7 +20,7 @@ class CreditCardForm extends Component{
             expiryYear: '',
             expiryMonth: '',
             Ccv: '',
-            cardIcon: '',
+            cardIcon: "https://s3-us-west-2.amazonaws.com/ryde-bucket-oregon/icons/sample.png",
             error : false,
             isSubmitting: false,
             success : false,
@@ -37,14 +37,14 @@ class CreditCardForm extends Component{
                 return false;
             }
             console.log('this._validate()',this._validate());
-            
+
             if(!this._validate()){
                 return false
             }
             dispatch({ type: LOADING,payload: true })
             /**
-             * SEND POST REQUEST TO API 
-             * 
+             * SEND POST REQUEST TO API
+             *
             const response = await (await axios.post('API_END_POINT', {
                 headers: {
                     Authorization: localStorage.access_token
@@ -79,7 +79,7 @@ class CreditCardForm extends Component{
                 this._onChageCreditCardNumber()
             })
         }
-            
+
     }
 
     _onChageCreditCardNumber = () =>{
@@ -98,9 +98,9 @@ class CreditCardForm extends Component{
         }else if(creditCardNumber.charAt(0) == 5 && (creditCardNumber.charAt(1) >= 1 && creditCardNumber.charAt(1) <= 5)){
           this.setState({cardType: 'Mastercard' , error:false ,cardIcon: s3Link+"mastercard.png"})
         }else {
-          this.setState({cardType: '' ,cardIcon: '',error:true})
+          this.setState({cardType: '' ,cardIcon: "https://s3-us-west-2.amazonaws.com/ryde-bucket-oregon/icons/sample.png",error:true})
         }
-  
+
       }
 
     _handleChangeExpireMonth = (e)=> {
@@ -162,11 +162,11 @@ class CreditCardForm extends Component{
                             </div>
                         </div>
                     </div>
-                    <div className={ 
-                        (this.state.expiryMonth.length > 1 && (parseInt(this.state.expiryMonth) > 12 || 
-                        parseInt(this.state.expiryMonth) < 1 )) || 
-                        (this.state.expiryYear.length > 3 && 
-                        (parseInt(this.state.expiryYear) < 2017 || 
+                    <div className={
+                        (this.state.expiryMonth.length > 1 && (parseInt(this.state.expiryMonth) > 12 ||
+                        parseInt(this.state.expiryMonth) < 1 )) ||
+                        (this.state.expiryYear.length > 3 &&
+                        (parseInt(this.state.expiryYear) < 2017 ||
                         parseInt(this.state.expiryYear) > 2060 ) ||
                         ((!this.state.expiryMonth || !this.state.expiryYear) && this.state.isSubmitting)
                         ) ? "form-group has-error": "form-group" }>
