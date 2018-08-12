@@ -36,8 +36,6 @@ class CreditCardForm extends Component{
             if(this.state.error){
                 return false;
             }
-            console.log('this._validate()',this._validate());
-
             if(!this._validate()){
                 return false
             }
@@ -143,7 +141,6 @@ class CreditCardForm extends Component{
     }
 
     render(){
-        console.log('this.state.error',this.state.error);
         return(
             <div className="row">
                 <div className="col-sm-6">
