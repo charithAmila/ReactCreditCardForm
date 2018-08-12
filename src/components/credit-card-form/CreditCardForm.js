@@ -16,7 +16,7 @@ class CreditCardForm extends Component{
         this.state = {
             userName : '',
             creditCardNumber : '',
-            cardType: 'Visa',
+            cardType: '',
             expiryYear: '',
             expiryMonth: '',
             Ccv: '',
